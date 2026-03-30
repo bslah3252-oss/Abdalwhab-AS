@@ -6,14 +6,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # هذا الجزء يحل مشكلة الصلاحيات للأبد
-      - name: Fix Permissions
-        run: |
-          sudo chown -R $USER:$USER .
-          sudo chmod -R 777 .
-
       - name: Build with Buildozer
-        uses: ArtemSBulgakov/buildozer-action@v1
+        uses: digreatbrian/buildozer-action@v1
         with:
           command: buildozer android debug
           buildozer_version: master
