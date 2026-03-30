@@ -8,7 +8,6 @@ version = 0.1
 requirements = python3,kivy,mediapipe,opencv-python-headless,numpy
 orientation = portrait
 android.permissions = CAMERA,WRITE_EXTERNAL_STORAGE,READ_EXTERNAL_STORAGE
-# الأرقام المطلوبة بدقة:
 android.api = 33
 android.minapi = 21
 android.sdk = 33
