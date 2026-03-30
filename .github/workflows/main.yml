@@ -2,12 +2,13 @@ name: Build APK
 on: [push]
 jobs:
   build:
-    runs-on: ubuntu-latest
+    # استخدام إصدار 20.04 يضمن توفر المكتبات القديمة المطلوبة
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v4
 
       - name: Build with Buildozer
-        uses: digreatbrian/buildozer-action@v1
+        uses: ArtemSBulgakov/buildozer-action@v1
         with:
           command: buildozer android debug
           buildozer_version: master
