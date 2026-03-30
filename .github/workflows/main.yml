@@ -2,10 +2,16 @@ name: Build APK
 on: [push]
 jobs:
   build:
-    # استخدام إصدار 20.04 يضمن توفر المكتبات القديمة المطلوبة
-    runs-on: ubuntu-20.04
+    # استخدام الإصدار الأحدث والأسرع
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
+
+      # تثبيت المكتبات الناقصة يدوياً لتجنب خطأ libtinfo5
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libtinfo5 libncurses5
 
       - name: Build with Buildozer
         uses: ArtemSBulgakov/buildozer-action@v1
