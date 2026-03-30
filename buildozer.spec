@@ -1,10 +1,10 @@
 [app]
 
 # Application title
-title = Digital Smile Design
+title = Abdalwhab-AS
 
 # Package name
-package.name = digitalsmiledesign
+package.name = abdalwhab-as
 
 # Package domain (reverse-DNS)
 package.domain = org.dsd
