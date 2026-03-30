@@ -6,16 +6,22 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # حل مشكلة الصلاحيات يدوياً قبل البدء
-      - name: Fix permissions
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Buildozer and Dependencies
         run: |
-          sudo chown -R $USER:$USER .
+          pip install --user --upgrade buildozer
+          pip install --user --upgrade Cython==0.29.33
 
       - name: Build with Buildozer
-        uses: ArtemSBulgakov/buildozer-action@v1
-        with:
-          command: buildozer android debug
-          buildozer_version: master
+        run: |
+          # بناء التطبيق مباشرة بدون حاوية Docker لتجنب مشاكل الصلاحيات
+          ~/.local/bin/buildozer android debug
+        env:
+          ACCEPT_SDK_LICENSE: "yes"
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
