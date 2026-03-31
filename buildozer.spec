@@ -1,5 +1,5 @@
 [app]
-title = Smile Design Al-Nabil
+title = Smile Design Al Nabil
 package.name = smiledesign
 package.domain = org.nabil
 source.dir = .
@@ -11,10 +11,9 @@ requirements = python3,kivy==2.3.0,kivymd
 orientation = portrait
 android.permissions = CAMERA,WRITE_EXTERNAL_STORAGE,READ_EXTERNAL_STORAGE
 
-android.api = 34
+android.api = 31
 android.minapi = 21
-# android.sdk = 33
-android.ndk = 26b
+android.ndk = 25b
 android.archs = arm64-v8a, armeabi-v7a
 android.allow_backup = True
 
