@@ -6,16 +6,15 @@ source.dir = .
 source.include_exts = py,png,jpg,kv,atlas
 version = 0.1
 
-# المتطلبات الأساسية للتطبيق
-requirements = python3,kivy,mediapipe,opencv-python
+# المكتبات المطلوبة بدقة لعمليات تحليل الصور والذكاء الاصطناعي
+requirements = python3,kivy==2.3.0,kivymd,mediapipe,opencv-python-headless,numpy
 
 orientation = portrait
 android.permissions = CAMERA,WRITE_EXTERNAL_STORAGE,READ_EXTERNAL_STORAGE
 
-# الإعدادات المحدثة لضمان النجاح
+# إعدادات النظام المحدثة 2026
 android.api = 34
 android.minapi = 21
-# تم تعطيل السطر التالي ليتولى النظام تحديده تلقائياً وتجنب الخطأ السابق
 # android.sdk = 33
 android.ndk = 26b
 android.archs = arm64-v8a, armeabi-v7a
