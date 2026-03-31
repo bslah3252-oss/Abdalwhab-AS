@@ -6,7 +6,7 @@ source.dir = .
 source.include_exts = py,png,jpg,kv,atlas
 version = 0.1
 
-requirements = python3,kivy==2.3.0,kivymd,mediapipe,opencv-python-headless,numpy,Cython==0.29.33
+requirements = python3,kivy==2.3.0,kivymd,numpy,opencv-python-headless
 
 orientation = portrait
 android.permissions = CAMERA,WRITE_EXTERNAL_STORAGE,READ_EXTERNAL_STORAGE
